@@ -7,7 +7,6 @@
 <h1>pass pharse by mahesh</h1>
 
 <h2>Getting input type</h2>
-
 <form>
     <label for="secret_phrase">Enter the secret phrase?</label>
     <input type ="password" id="secret_phrase" name="secret_phrase" min=10 max=50 step=2 value="Let me in"> <br>
@@ -44,6 +43,33 @@ function processPhrase(){
     out.innerHTML = "<h3>correct</h3>"+correct+"<br>"+"<h3>wrong</h3>"+wrong
 }
 </script>
+
+
+<div class="container">
+    <img src="Elephant.jpg" height="200" width="200" onclick="newImage()" id="img" alt="image">
+    <script>
+        var usingImage=1
+        function newImage(){
+            out=document.getElementById("img")
+            switch(usingImage){
+                case 1:
+                    out.src="Elephant.jpg"
+                    usingImage=usingImage+1
+                    break;
+                case 2:
+                    out.src="peacock.jpg"
+                    usingImage=usingImage+1
+                    break;
+                case 3:
+                    out.src="narwhal.jpg"
+                    usingImage=1
+                    break;
+                default:
+                    out.src="narwhal.jpg"                
+            }
+            
+        }
+    </script>
 
 </body>
 </html> 
